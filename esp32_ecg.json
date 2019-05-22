@@ -1,0 +1,61 @@
+{  
+   "title":"ESP32 ECG: Beats Per Minute",
+   "configuration":{  
+      "description":"Dashboard yang menampilkan detak jantung dari ESP32 yang terhubung dengan sensor Heart Monitor AD8232",
+      "widgets":[  
+         {  
+            "isSystemType":true,
+            "bundleAlias":"charts",
+            "typeAlias":"timeseries",
+            "type":"timeseries",
+            "title":"Timeseries - Chart.js",
+            "sizeX":14,
+            "sizeY":5,
+            "row":0,
+            "col":4,
+            "config":{  
+               "datasources":[  
+                  {  
+                     "type":"device",
+                     "deviceAliasId":"1",
+                     "dataKeys":[  
+                        {  
+                           "name":"Beats per minute",
+                           "label":"Beats per minute, bpm",
+                           "type":"timeseries",
+                           "color":"#ff6f00",
+                           "settings":{  
+                              "showLines":true,
+                              "fillLines":false,
+                              "showPoints":false
+                           },
+                           "_hash":0.7438679421517123
+                        }
+                     ],
+                     "name":"ESP32 ECG"
+                  }
+               ],
+               "timewindow":{  
+                  "realtime":{  
+                     "timewindowMs":120000
+                  }
+               },
+               "showTitle":true,
+               "backgroundColor":"#fff",
+               "color":"rgba(0, 0, 0, 0.87)",
+               "padding":"8px",
+               "settings":{  
+
+               },
+               "title":"Beats per minute"
+            }
+         }
+      ],
+      "deviceAliases":{  
+         "1":{  
+            "alias":"ESP32 ECG",
+            "deviceId":"b5b32db0-7b11-11e9-a31b-bbaebe3575d3"
+         }
+      }
+   }
+}
